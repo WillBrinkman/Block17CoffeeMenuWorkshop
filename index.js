@@ -20,3 +20,14 @@ console.log(JSON.stringify(coffeeMenu.filter(drinksUnderFive)))
 console.table(coffeeMenu.filter(drinksUnderFive))
 
 // 4. Print an Array of drinks that are priced at an even number
+const EvenNumPricedDrinks = (drink) => {
+    return drink.price%2 === 0
+}
+
+// use filter function to return even priced drinks, assign to variable
+const evenPricedDrinks = coffeeMenu.filter(EvenNumPricedDrinks)
+
+console.table(evenPricedDrinks)
+
+// 5. Print the total cost if you ordered one of ever menu item
+// 
