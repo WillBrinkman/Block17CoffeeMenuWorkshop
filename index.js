@@ -44,4 +44,16 @@ const sumTotalCost = (accum, currentVal) => {
 const totalCost = drinkPricesArr.reduce(sumTotalCost);
 console.log(`Ordering one of every item will cost $${totalCost}`)
 
-// 6. Print
+// 6. Print an array with all the drinks that are seasonal.
+
+const seasonalDrinks = (drink) => {
+    return drink.seasonal
+}
+
+const seasonalDrinksArr = coffeeMenu.filter(seasonalDrinks)
+
+console.table(seasonalDrinksArr)
+
+// 7. Print all the seasonal drinks with the words "with imported beans" after the item name.
+// For example: "affogato with imported beans".
+
