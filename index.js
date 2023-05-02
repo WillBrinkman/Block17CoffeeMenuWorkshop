@@ -30,4 +30,18 @@ const evenPricedDrinks = coffeeMenu.filter(EvenNumPricedDrinks)
 console.table(evenPricedDrinks)
 
 // 5. Print the total cost if you ordered one of ever menu item
-// 
+
+const drinkPrices = (drink) => {
+    return drink.price
+}
+
+const drinkPricesArr = coffeeMenu.map(drinkPrices)
+
+const sumTotalCost = (accum, currentVal) => {
+    return accum + currentVal
+}
+
+const totalCost = drinkPricesArr.reduce(sumTotalCost);
+console.log(`Ordering one of every item will cost $${totalCost}`)
+
+// 6. Print
